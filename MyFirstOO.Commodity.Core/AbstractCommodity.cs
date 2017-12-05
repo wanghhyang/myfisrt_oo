@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFirstOO.Commodity.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,9 @@ namespace MyFirstOO.Commodity.Core
     /// </summary>
     public abstract class AbstractCommodity
     {
-        
+        private CommodityInfo _baseCommodityInfo;
+        private string[] _products;
+        protected abstract void CreateCommodity();
+
     }
 }

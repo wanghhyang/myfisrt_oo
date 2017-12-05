@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CC87F900-4FC2-426D-8331-C71D42028751}</ProjectGuid>
+    <ProjectGuid>{2E80B885-C2D7-49A0-8A51-37044692AC38}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyFirstOO.Commodity.Core</RootNamespace>
-    <AssemblyName>MyFirstOO.Commodity.Core</AssemblyName>
+    <RootNamespace>MyFirstOO.Commodity.Dto</RootNamespace>
+    <AssemblyName>MyFirstOO.Commodity.Dto</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,14 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractCommodity.cs" />
+    <Compile Include="CommodityDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MyFirstOO.Commodity.Model\MyFirstOO.Commodity.Model.csproj">
-      <Project>{c9923676-6a08-486c-b99c-938c97e86eee}</Project>
-      <Name>MyFirstOO.Commodity.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
