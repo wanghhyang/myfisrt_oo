@@ -13,7 +13,15 @@ namespace MyFirstOO.Commodity.Core
     public abstract class AbstractCommodity
     {
         private CommodityInfo _baseCommodityInfo;
+        private string _addtionalCommodityInfo;
         private string[] _products;
+        private string[] _packages;
+        private string[] _pictures;
+        private string[] _attributes;
+        private string[] _saleCategorys;
+        private decimal price;
+
+
         protected abstract void CreateCommodity();
 
     }
