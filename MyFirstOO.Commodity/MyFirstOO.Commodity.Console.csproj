@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{FE5F7EB2-00DE-4420-A524-018DAC80FFAF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MyFirstOO.Commodity</RootNamespace>
-    <AssemblyName>MyFirstOO.Commodity</AssemblyName>
+    <RootNamespace>MyFirstOO.Commodity.Console</RootNamespace>
+    <AssemblyName>MyFirstOO.Commodity.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
