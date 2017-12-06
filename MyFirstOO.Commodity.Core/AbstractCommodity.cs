@@ -23,6 +23,6 @@ namespace MyFirstOO.Commodity.Core
 
 
         protected abstract void CreateCommodity();
-
+        protected abstract void UpdateCommodity();
     }
 }
