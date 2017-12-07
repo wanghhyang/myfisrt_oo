@@ -18,10 +18,42 @@ namespace MyFirstOO.Commodity.Core
         private string[] _packages;
         private string[] _pictures;
         private string[] _attributes;
-        private string[] _saleCategorys;
         private decimal price;
-
-
+        protected CommodityInfo BaseCommodityInfo
+        {
+            get { return _baseCommodityInfo; }
+            set { _baseCommodityInfo = value; }
+        }
+        protected string AddionalCommodityInfo
+        {
+            get { return _addtionalCommodityInfo; }
+            set { _addtionalCommodityInfo = value; }
+        }
+        protected string[] Products
+        {
+            get { return _products; }
+            set { _products = value; }
+        }
+        protected string[] Packages
+        {
+            get { return _packages; }
+            set { _packages = value; }
+        }
+        protected string[] Pictures
+        {
+            get { return _pictures; }
+            set { _pictures = value; }
+        }
+        protected string[] Attributes
+        {
+            get { return _attributes; }
+            set { _attributes = value; }
+        }
+        protected decimal Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
         protected abstract void CreateCommodity();
         protected abstract void UpdateCommodity();
     }

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AbstractCommodity.cs" />
     <Compile Include="AbstractCompanyId.cs" />
+    <Compile Include="GongyinglianZYCommodity.cs" />
     <Compile Include="ICommodityIngredientFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ZYCommodityIngredientFactory.cs" />

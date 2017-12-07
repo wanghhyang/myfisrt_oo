@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFirstOO.Commodity.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,11 @@ namespace MyFirstOO.Commodity.Core
     public interface ICommodityIngredientFactory
     {
         /// <summary>
+        /// 创建商品基本信息
+        /// </summary>
+        /// <returns></returns>
+        CommodityInfo CreateBaseInfo();
+        /// <summary>
         /// 创建公司主体
         /// </summary>
         /// <returns></returns>
@@ -21,5 +27,34 @@ namespace MyFirstOO.Commodity.Core
         /// </summary>
         /// <returns></returns>
         string CreateInfoValidateRule();
+        /// <summary>
+        /// 创建额外的商品信息
+        /// </summary>
+        /// <returns></returns>
+        string CreateAddtionalCommodityInfo();
+        /// <summary>
+        /// 创建商品组成原料
+        /// </summary>
+        /// <returns></returns>
+        string[] CreateCommodityProduct();
+        /// <summary>
+        /// 创建商品的辅料
+        /// </summary>
+        /// <returns></returns>
+        string[] CreateCommodityPackages();
+        /// <summary>
+        /// 创建商品图片
+        /// </summary>
+        /// <returns></returns>
+        string[] CreateCommodityPictures();
+        /// <summary>
+        /// 创建商品属性
+        /// </summary>
+        /// <returns></returns>
+        string[] CreateCommodityAttributes();
+        /// <summary>
+        /// 是否联营
+        /// </summary>
+        int IsDearls { get; set; }
     }
 }
