@@ -14,4 +14,9 @@ namespace MyFirstOO.Commodity.Model
         public string Spec { get; set; }
         public string CategoryInfo { get; set; }
     }
+    public enum CommodityType
+    {
+        Ziying,
+        Liling
+    }
 }

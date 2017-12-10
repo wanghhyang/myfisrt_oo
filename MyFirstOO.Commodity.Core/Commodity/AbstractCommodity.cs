@@ -54,7 +54,15 @@ namespace MyFirstOO.Commodity.Core
             get { return price; }
             set { price = value; }
         }
-        protected abstract void CreateCommodity();
-        protected abstract void UpdateCommodity();
+        public void SetBasicFieldInfo()
+        {
+
+        }
+        protected abstract void PreSaveCommodity();
+        protected abstract void bindProduct();
+        protected abstract void SetPrice();
+        protected abstract void SetAttribute();
+        
+        
     }
 }
