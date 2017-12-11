@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyFirstOO.Commodity.Core;
+using MyFirstOO.Commodity.Core.Commodity;
+using MyFirstOO.Commodity.Core.Ingreadient;
 
 namespace MyFirstOO.Commodity.Core.Tests
 {

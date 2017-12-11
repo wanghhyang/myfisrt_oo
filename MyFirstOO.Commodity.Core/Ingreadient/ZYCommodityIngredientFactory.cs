@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MyFirstOO.Commodity.Model;
 
-namespace MyFirstOO.Commodity.Core
+namespace MyFirstOO.Commodity.Core.Ingreadient
 {
     /// <summary>
     /// 自营公司

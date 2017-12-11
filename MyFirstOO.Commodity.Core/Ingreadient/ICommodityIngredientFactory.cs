@@ -1,11 +1,6 @@
 ﻿using MyFirstOO.Commodity.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MyFirstOO.Commodity.Core
+namespace MyFirstOO.Commodity.Core.Ingreadient
 {
     /// <summary>
     /// 决定商品的因素（关键成分）

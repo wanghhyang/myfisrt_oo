@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyFirstOO.Commodity.Core.Commodity;
+using MyFirstOO.Commodity.Core.Ingreadient;
 
 namespace MyFirstOO.Commodity.Core.Channel
 {
