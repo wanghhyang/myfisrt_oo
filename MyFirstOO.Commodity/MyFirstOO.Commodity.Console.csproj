@@ -47,5 +47,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyFirstOO.Commodity.Core\MyFirstOO.Commodity.Core.csproj">
+      <Project>{cc87f900-4fc2-426d-8331-c71d42028751}</Project>
+      <Name>MyFirstOO.Commodity.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyFirstOO.Commodity.Model\MyFirstOO.Commodity.Model.csproj">
+      <Project>{c9923676-6a08-486c-b99c-938c97e86eee}</Project>
+      <Name>MyFirstOO.Commodity.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

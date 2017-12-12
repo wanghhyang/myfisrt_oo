@@ -12,8 +12,8 @@ namespace MyFirstOO.Commodity.Core.Tests
         [TestMethod()]
         public void GongyinglianZYCommodityTest()
         {
-            ICommodityIngredientFactory commodityIngredientFactory = new ZYCommodityIngredientFactory();
-            AbstractCommodity commodity = new GongyinglianZYCommodity(commodityIngredientFactory);
+            ICommodityIngredientFactory commodityIngredientFactory = new GongyinglianCommodityIngredientFactory();
+            AbstractCommodity commodity = new ZyCommodity(commodityIngredientFactory);
             //commodity.CreateCommodity();
         }
 

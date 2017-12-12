@@ -7,54 +7,26 @@ namespace MyFirstOO.Commodity.Core.Commodity
     /// </summary>
     public abstract class AbstractCommodity
     {
-        private CommodityInfo _baseCommodityInfo;
-        private string _addtionalCommodityInfo;
-        private string[] _products;
-        private string[] _packages;
-        private string[] _pictures;
-        private string[] _attributes;
-        private decimal price;
-        protected CommodityInfo BaseCommodityInfo
-        {
-            get { return _baseCommodityInfo; }
-            set { _baseCommodityInfo = value; }
-        }
-        protected string AddionalCommodityInfo
-        {
-            get { return _addtionalCommodityInfo; }
-            set { _addtionalCommodityInfo = value; }
-        }
-        protected string[] Products
-        {
-            get { return _products; }
-            set { _products = value; }
-        }
-        protected string[] Packages
-        {
-            get { return _packages; }
-            set { _packages = value; }
-        }
-        protected string[] Pictures
-        {
-            get { return _pictures; }
-            set { _pictures = value; }
-        }
-        protected string[] Attributes
-        {
-            get { return _attributes; }
-            set { _attributes = value; }
-        }
-        protected decimal Price
-        {
-            get { return price; }
-            set { price = value; }
-        }
+        protected CommodityBaseInfo BaseCommodityInfo { get; set; }
+
+        protected string AddionalCommodityInfo { get; set; }
+
+        protected CommodityProductInfo[] Products { get; set; }
+
+        protected CommodityPackageInfo[] Packages { get; set; }
+
+        protected string Pictures { get; set; }
+
+        protected string[] Attributes { get; set; }
+
+        protected decimal Price { get; set; }
+
         public void SetBasicFieldInfo()
         {
 
         }
         protected abstract void PreSaveCommodity();
-        protected abstract void bindProduct();
+        protected abstract void BindProduct();
         protected abstract void SetPrice();
         protected abstract void SetAttribute();
         
