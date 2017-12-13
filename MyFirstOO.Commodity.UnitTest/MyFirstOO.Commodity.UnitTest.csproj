@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Channel\AbstractGeneralizedChannelTests.cs" />
     <Compile Include="ZYCommodityTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -58,6 +59,10 @@
     <ProjectReference Include="..\MyFirstOO.Commodity.Core\MyFirstOO.Commodity.Core.csproj">
       <Project>{cc87f900-4fc2-426d-8331-c71d42028751}</Project>
       <Name>MyFirstOO.Commodity.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyFirstOO.Commodity.Model\MyFirstOO.Commodity.Model.csproj">
+      <Project>{C9923676-6A08-486C-B99C-938C97E86EEE}</Project>
+      <Name>MyFirstOO.Commodity.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
