@@ -13,8 +13,9 @@ namespace MyFirstOO.Commodity.Core.Channel
     {
         protected override AbstractCommodity CreateCommodity(CommodityType commodityType)
         {
-            ICommodityIngredientFactory commodityIngredient = new ChaoshiCommodityIngredientFactory();
             AbstractCommodity commodity = null;
+            ICommodityIngredientFactory commodityIngredient = new ChaoshiCommodityIngredientFactory();
+
             if ((commodityType & CommodityType.Ziying) == CommodityType.Ziying)
             {
                 commodity = new ZyCommodity(commodityIngredient);

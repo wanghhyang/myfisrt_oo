@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MyFirstOO.Commodity.Core.Commodity;
+using MyFirstOO.Commodity.Core.Ingreadient;
 
 namespace MyFirstOO.Commodity.Core.Channel
 {
@@ -13,6 +14,8 @@ namespace MyFirstOO.Commodity.Core.Channel
     /// </summary>
     public abstract class AbstractGeneralizedChannel
     {
+
+        public CommodityInfo CommodityInfo = null;
         /// <summary>
         /// 发布商品
         /// </summary>
@@ -21,7 +24,16 @@ namespace MyFirstOO.Commodity.Core.Channel
         public AbstractCommodity IssuedCommodity(CommodityType commodityType)
         {
             AbstractCommodity commodity = CreateCommodity(commodityType);
+            commodity.AddionalCommodityInfo = CommodityInfo.AddtionalInfo;
+            commodity.BaseCommodityInfo = CommodityInfo.Base;
+            commodity.Products = CommodityInfo.Products;
+            commodity.Price = CommodityInfo.Price;
+
             commodity.SetBasicFieldInfo();
+            commodity.BindProduct();
+            commodity.SetPrice();
+            commodity.SetBasicFieldInfo();
+            commodity.PreSaveCommodity();
             return commodity;
         }
         /// <summary>

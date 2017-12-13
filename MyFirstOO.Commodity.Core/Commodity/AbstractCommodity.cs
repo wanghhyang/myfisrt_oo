@@ -7,29 +7,29 @@ namespace MyFirstOO.Commodity.Core.Commodity
     /// </summary>
     public abstract class AbstractCommodity
     {
-        protected CommodityBaseInfo BaseCommodityInfo { get; set; }
+        public CommodityBaseInfo BaseCommodityInfo { get; set; }
 
-        protected string AddionalCommodityInfo { get; set; }
+        public CommodityAddtionalInfo AddionalCommodityInfo { get; set; }
 
-        protected CommodityProductInfo[] Products { get; set; }
+        public CommodityProductInfo[] Products { get; set; }
 
-        protected CommodityPackageInfo[] Packages { get; set; }
+        public CommodityPackageInfo[] Packages { get; set; }
 
-        protected string Pictures { get; set; }
+        public string Pictures { get; set; }
 
-        protected string[] Attributes { get; set; }
+        public string[] Attributes { get; set; }
 
-        protected decimal Price { get; set; }
+        public decimal Price { get; set; }
 
         public void SetBasicFieldInfo()
         {
 
         }
-        protected abstract void PreSaveCommodity();
-        protected abstract void BindProduct();
-        protected abstract void SetPrice();
-        protected abstract void SetAttribute();
-        
-        
+        public abstract void PreSaveCommodity();
+        public abstract void BindProduct();
+        public abstract void SetPrice();
+        public abstract void SetAttribute();
+
+
     }
 }

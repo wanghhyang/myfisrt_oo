@@ -8,6 +8,7 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
     /// </summary>
     public class GongyinglianCommodityIngredientFactory : ICommodityIngredientFactory
     {
+        public CommodityInfo Commodity { get; set; }
         public CommodityBaseInfo CreateBaseInfo()
         {
             var baseInfo = new CommodityBaseInfo
@@ -25,15 +26,19 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
             return 1;
         }
 
-        public string CreateInfoValidateRule()
+        public bool CommodityValidateRule()
         {
-            return "自营公司主体的验证规则";
+            if (string.IsNullOrEmpty(Commodity.Base.CommodityName))
+            {
+                return false;
+            }
+            return true;
         }
 
-
-        public string SetAddtionalCommodityInfo()
+        public CommodityAddtionalInfo SetAddtionalCommodityInfo()
         {
-            return "设置了一些商品扩展信息";
+            Commodity.AddtionalInfo = new CommodityAddtionalInfo { AdditonalInfo = "不可打包" };
+            return Commodity.AddtionalInfo;
         }
 
         public CommodityProductInfo[] SetCommodityProduct()

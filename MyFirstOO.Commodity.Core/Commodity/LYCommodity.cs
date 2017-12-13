@@ -10,24 +10,25 @@ namespace MyFirstOO.Commodity.Core.Commodity
         {
             _commodityIngredientFactory = commodityIngredientFactory;
         }
-        protected override void PreSaveCommodity()
+
+        public override void PreSaveCommodity()
         {
             BaseCommodityInfo = _commodityIngredientFactory.CreateBaseInfo();
             Products = _commodityIngredientFactory.SetCommodityProduct();
             Packages = _commodityIngredientFactory.SetCommodityPackages();
         }
-        
-        protected override void BindProduct()
+
+        public override void BindProduct()
         {
             throw new NotImplementedException();
         }
 
-        protected override void SetAttribute()
+        public override void SetAttribute()
         {
             throw new NotImplementedException();
         }
 
-        protected override void SetPrice()
+        public override void SetPrice()
         {
             throw new NotImplementedException();
         }

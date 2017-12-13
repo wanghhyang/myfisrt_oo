@@ -9,29 +9,44 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
 {
     public class ChaoshiCommodityIngredientFactory : ICommodityIngredientFactory
     {
+        public CommodityInfo Commodity { get; set; }
+
         public CommodityBaseInfo CreateBaseInfo()
         {
-            throw new NotImplementedException();
+            if (Commodity.Base != null)
+            {
+                return Commodity.Base;
+            }
+            return new CommodityBaseInfo();
         }
 
         public int CreateCompanyId()
         {
-            throw new NotImplementedException();
+            return Commodity.CompanyId;
         }
 
-        public string CreateInfoValidateRule()
+        public bool CommodityValidateRule()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(Commodity.Base.CommodityName))
+            {
+                return false;
+            }
+            return true;
         }
 
-        public string SetAddtionalCommodityInfo()
+        public CommodityAddtionalInfo SetAddtionalCommodityInfo()
         {
-            throw new NotImplementedException();
+            Commodity.AddtionalInfo = new CommodityAddtionalInfo { AdditonalInfo = "不可打包" };
+            return Commodity.AddtionalInfo;
         }
 
         public CommodityProductInfo[] SetCommodityProduct()
         {
-            throw new NotImplementedException();
+            var products = new[] {
+                new CommodityProductInfo { ProductId = "1000", ProductName = "原料1", Amount = 1, CommodityProductId = "aaa" },
+                new CommodityProductInfo {ProductId="10001",ProductName="原料2",Amount=2,CommodityProductId="bbb"}
+            };
+            return products;
         }
 
         public CommodityPackageInfo[] SetCommodityPackages()

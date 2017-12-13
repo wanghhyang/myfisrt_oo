@@ -12,9 +12,23 @@ namespace MyFirstOO.Commodity.Model
     public class CommodityInfo
     {
         /// <summary>
+        /// 公司主体
+        /// </summary>
+        public int CompanyId { get; set; }
+
+        /// <summary>
         /// 基础信息
         /// </summary>
         public CommodityBaseInfo Base { get; set; }
+        /// <summary>
+        /// 额外信息
+        /// </summary>
+        public CommodityAddtionalInfo AddtionalInfo
+        {
+            get;
+            set;
+        }
+
         /// <summary>
         /// 原料
         /// </summary>

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommodityAddtionalInfo.cs" />
     <Compile Include="CommodityBaseInfo.cs" />
     <Compile Include="CommodityInfo.cs" />
     <Compile Include="CommodityPackageInfo.cs" />

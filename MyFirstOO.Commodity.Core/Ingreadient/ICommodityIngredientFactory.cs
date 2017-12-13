@@ -7,6 +7,8 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
     /// </summary>
     public interface ICommodityIngredientFactory
     {
+        CommodityInfo Commodity { get; set; }
+
         /// <summary>
         /// 创建商品基本信息
         /// </summary>
@@ -21,12 +23,12 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
         /// 创建自己的商品信息验证规则
         /// </summary>
         /// <returns></returns>
-        string CreateInfoValidateRule();
+        bool CommodityValidateRule();
         /// <summary>
         /// 创建额外的商品信息
         /// </summary>
         /// <returns></returns>
-        string SetAddtionalCommodityInfo();
+        CommodityAddtionalInfo SetAddtionalCommodityInfo();
         /// <summary>
         /// 创建商品组成原料
         /// </summary>
