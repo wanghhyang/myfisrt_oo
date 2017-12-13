@@ -13,9 +13,14 @@ namespace MyFirstOO.Commodity
     {
         static void Main(string[] args)
         {
-            AbstractGeneralizedChannel abstractGeneralizedChannel = new GongyinglianGeneralizedChannel();
+            AbstractGeneralizedChannel abstractGeneralizedChannel = new GongyinglianGeneralizedChannel
+            {
+                CommodityInfo = new CommodityInfo
+                {
+                    AddtionalInfo = new CommodityAddtionalInfo { AdditonalInfo = "不需要独立包装" }
+                }
+            };
 
-            //ICommodityIngredientFactory IngredientFactory = new ChaoshiCommodityIngredientFactory();
             abstractGeneralizedChannel.IssuedCommodity(CommodityType.Ziying);
         }
     }
