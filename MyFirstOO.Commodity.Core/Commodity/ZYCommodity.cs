@@ -11,11 +11,13 @@ namespace MyFirstOO.Commodity.Core.Commodity
             _commodityIngredientFactory = commodityIngredientFactory;
         }
 
-        public override void PreSaveCommodity()
+        public override void PreResolveCommodity()
         {
             BaseCommodityInfo = _commodityIngredientFactory.CreateBaseInfo();
             AddionalCommodityInfo = _commodityIngredientFactory.SetAddtionalCommodityInfo();
             Attributes = _commodityIngredientFactory.CreateCommodityAttributes();
+            Products = _commodityIngredientFactory.SetCommodityProducts();
+            Packages = _commodityIngredientFactory.SetCommodityPackages();
         }
 
         public override void BindProduct()

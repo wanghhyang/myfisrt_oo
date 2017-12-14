@@ -11,19 +11,11 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
         public CommodityInfo Commodity { get; set; }
         public CommodityBaseInfo CreateBaseInfo()
         {
-            var baseInfo = new CommodityBaseInfo
-            {
-                CategoryInfo = "手机",
-                CommodityCode = "10000",
-                CommodityId = Guid.NewGuid().ToString(),
-                CommodityName = "IPhone X",
-                Spec = "黑色128G"
-            };
-            return baseInfo;
+            return Commodity.Base;
         }
         public int CreateCompanyId()
         {
-            return 1;
+            return Commodity.CompanyId;
         }
 
         public bool CommodityValidateRule()
@@ -41,7 +33,7 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
             return Commodity.AddtionalInfo;
         }
 
-        public CommodityProductInfo[] SetCommodityProduct()
+        public CommodityProductInfo[] SetCommodityProducts()
         {
             return new[] { new CommodityProductInfo(), new CommodityProductInfo() };
         }

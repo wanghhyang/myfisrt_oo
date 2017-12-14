@@ -40,7 +40,7 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
             return Commodity.AddtionalInfo;
         }
 
-        public CommodityProductInfo[] SetCommodityProduct()
+        public CommodityProductInfo[] SetCommodityProducts()
         {
             var products = new[] {
                 new CommodityProductInfo { ProductId = "1000", ProductName = "原料1", Amount = 1, CommodityProductId = "aaa" },

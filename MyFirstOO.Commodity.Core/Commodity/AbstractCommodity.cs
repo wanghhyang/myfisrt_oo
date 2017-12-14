@@ -25,11 +25,9 @@ namespace MyFirstOO.Commodity.Core.Commodity
         {
 
         }
-        public abstract void PreSaveCommodity();
+        public abstract void PreResolveCommodity();
         public abstract void BindProduct();
         public abstract void SetPrice();
         public abstract void SetAttribute();
-
-
     }
 }

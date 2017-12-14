@@ -19,13 +19,7 @@ namespace MyFirstOO.Commodity.Core.Channel
             AbstractCommodity commodity = null;
             ICommodityIngredientFactory ingredientFactory = new GongyinglianCommodityIngredientFactory()
             {
-                Commodity=new CommodityInfo()
-                {
-                    AddtionalInfo=CommodityInfo.AddtionalInfo,
-                    Base=CommodityInfo.Base,
-                    CompanyId=CommodityInfo.CompanyId,
-                    Dept=CommodityInfo.Dept
-                }
+                Commodity= CommodityInfo
             };
             if ((commodityType & CommodityType.Ziying) == CommodityType.Ziying)
             {

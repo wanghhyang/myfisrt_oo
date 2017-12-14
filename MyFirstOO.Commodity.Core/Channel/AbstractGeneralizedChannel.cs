@@ -28,12 +28,10 @@ namespace MyFirstOO.Commodity.Core.Channel
             commodity.BaseCommodityInfo = CommodityInfo.Base;
             commodity.Products = CommodityInfo.Products;
             commodity.Price = CommodityInfo.Price;
-
-            commodity.SetBasicFieldInfo();
+            
             commodity.BindProduct();
             commodity.SetPrice();
-            commodity.SetBasicFieldInfo();
-            commodity.PreSaveCommodity();
+            commodity.PreResolveCommodity();
             return commodity;
         }
         /// <summary>

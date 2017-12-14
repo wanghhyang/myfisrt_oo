@@ -33,7 +33,7 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
         /// 创建商品组成原料
         /// </summary>
         /// <returns></returns>
-        CommodityProductInfo[] SetCommodityProduct();
+        CommodityProductInfo[] SetCommodityProducts();
         /// <summary>
         /// 创建商品的辅料
         /// </summary>

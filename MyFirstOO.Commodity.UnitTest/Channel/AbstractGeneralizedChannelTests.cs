@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyFirstOO.Commodity.Core.Channel;
 using MyFirstOO.Commodity.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MyFirstOO.Commodity.Core.Channel.Tests
+namespace MyFirstOO.Commodity.UnitTest.Channel
 {
     [TestClass()]
     public class AbstractGeneralizedChannelTests
@@ -40,7 +36,7 @@ namespace MyFirstOO.Commodity.Core.Channel.Tests
                         ProductName="越南火龙果",
                         Amount=2
                     }},
-                    Price=25
+                    Price = 25
                 }
             };
             abstractGeneralizedChannel.IssuedCommodity(CommodityType.Ziying);
