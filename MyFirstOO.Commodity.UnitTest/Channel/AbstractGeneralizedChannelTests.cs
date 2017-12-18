@@ -11,7 +11,7 @@ namespace MyFirstOO.Commodity.UnitTest.Channel
         [TestMethod()]
         public void IssuedCommodityTest()
         {
-            AbstractGeneralizedChannel abstractGeneralizedChannel = new GongyinglianGeneralizedChannel()
+            AbstractGeneralizedChannel abstractGeneralizedChannel = new ZYGeneralizedChannel()
             {
                 CommodityInfo = new CommodityInfo()
                 {
@@ -39,7 +39,7 @@ namespace MyFirstOO.Commodity.UnitTest.Channel
                     Price = 25
                 }
             };
-            abstractGeneralizedChannel.IssuedCommodity(CommodityType.Ziying);
+            abstractGeneralizedChannel.IssuedCommodity(CommodityType.Gongyinglian);
             Assert.Fail();
         }
     }

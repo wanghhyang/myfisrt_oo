@@ -56,10 +56,22 @@ namespace MyFirstOO.Commodity.Model
         /// <summary>
         /// 自营商品
         /// </summary>
-        Ziying,
+        Gongyinglian,
         /// <summary>
         /// 联营商品
         /// </summary>
-        Lianying
+        Chaoshi,
+        /// <summary>
+        /// youpei
+        /// </summary>
+        Youpei,
+        /// <summary>
+        /// 赶海
+        /// </summary>
+        Ganhai,
+        /// <summary>
+        /// O2O
+        /// </summary>
+        O2O
     }
 }

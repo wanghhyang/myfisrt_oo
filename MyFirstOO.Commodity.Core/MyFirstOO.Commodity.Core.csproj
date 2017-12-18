@@ -40,16 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Channel\ChaoshiGeneralizedChannel.cs" />
+    <Compile Include="Channel\LYGeneralizedChannel.cs" />
     <Compile Include="Commodity\AbstractCommodity.cs" />
     <Compile Include="Channel\AbstractGeneralizedChannel.cs" />
-    <Compile Include="Channel\GongyinglianGeneralizedChannel.cs" />
-    <Compile Include="Commodity\LyCommodity.cs" />
-    <Compile Include="Commodity\ZyCommodity.cs" />
+    <Compile Include="Channel\ZYGeneralizedChannel.cs" />
+    <Compile Include="Commodity\ChaoshiCommodity.cs" />
+    <Compile Include="Commodity\GongyinglianCommodity.cs" />
     <Compile Include="Ingreadient\ChaoshiCommodityIngredientFactory.cs" />
+    <Compile Include="Ingreadient\GongyinglianLYCommodityIngredientFactory.cs" />
     <Compile Include="Ingreadient\ICommodityIngredientFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ingreadient\GongyinglianCommodityIngredientFactory.cs" />
+    <Compile Include="Ingreadient\GongyinglianZYCommodityIngredientFactory.cs" />
+    <Compile Include="Validate\GongyinglianZYCommodityValidate.cs" />
+    <Compile Include="Validate\ICommodityValidate.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyFirstOO.Commodity.Model\MyFirstOO.Commodity.Model.csproj">

@@ -15,16 +15,6 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
         /// <returns></returns>
         CommodityBaseInfo CreateBaseInfo();
         /// <summary>
-        /// 创建公司主体
-        /// </summary>
-        /// <returns></returns>
-        DeptInfo CreateCompanyAndDept();
-        /// <summary>
-        /// 创建产地
-        /// </summary>
-        /// <returns></returns>
-        OriginInfo CreateOrigin();
-        /// <summary>
         /// 创建自己的商品信息验证规则
         /// </summary>
         /// <returns></returns>

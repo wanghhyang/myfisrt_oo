@@ -1,18 +1,20 @@
 ﻿using System;
 using MyFirstOO.Commodity.Core.Ingreadient;
+using MyFirstOO.Commodity.Model;
 
 namespace MyFirstOO.Commodity.Core.Commodity
 {
-    public class ZyCommodity : AbstractCommodity
+    public class GongyinglianCommodity : AbstractCommodity
     {
         private readonly ICommodityIngredientFactory _commodityIngredientFactory;
-        public ZyCommodity(ICommodityIngredientFactory commodityIngredientFactory)
+        public GongyinglianCommodity(ICommodityIngredientFactory commodityIngredientFactory)
         {
             _commodityIngredientFactory = commodityIngredientFactory;
         }
 
         public override void PreResolveCommodity()
         {
+            _commodityIngredientFactory.CommodityValidateRule();
             BaseCommodityInfo = _commodityIngredientFactory.CreateBaseInfo();
             Attributes = _commodityIngredientFactory.CreateCommodityAttributes();
             Products = _commodityIngredientFactory.SetCommodityProducts();
@@ -21,12 +23,10 @@ namespace MyFirstOO.Commodity.Core.Commodity
 
         public override void BindProduct()
         {
-            throw new NotImplementedException();
         }
 
         public override void SetAttribute()
         {
-            throw new NotImplementedException();
         }
 
         public override void SetPrice()

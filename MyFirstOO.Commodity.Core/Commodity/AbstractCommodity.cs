@@ -25,6 +25,27 @@ namespace MyFirstOO.Commodity.Core.Commodity
         {
 
         }
+
+        public bool BasicValidateCommodity()
+        {
+            if (string.IsNullOrEmpty(BaseCommodityInfo.CommodityId))
+            {
+                return false;
+            }
+            if (string.IsNullOrEmpty(BaseCommodityInfo.CommodityCode))
+            {
+                return false;
+            }
+            if (string.IsNullOrEmpty(BaseCommodityInfo.CommodityName))
+            {
+                return false;
+            }
+            if (string.IsNullOrEmpty(BaseCommodityInfo.CategoryInfo))
+            {
+                return false;
+            }
+            return true;
+        }
         public abstract void PreResolveCommodity();
         public abstract void BindProduct();
         public abstract void SetPrice();

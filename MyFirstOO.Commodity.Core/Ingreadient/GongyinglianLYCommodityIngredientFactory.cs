@@ -1,52 +1,45 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using MyFirstOO.Commodity.Model;
 
 namespace MyFirstOO.Commodity.Core.Ingreadient
 {
-    /// <summary>
-    /// 供应链商品因素工厂类
-    /// </summary>
-    public class GongyinglianCommodityIngredientFactory : ICommodityIngredientFactory
+    public class GongyinglianLYCommodityIngredientFactory : ICommodityIngredientFactory
     {
+        private int _isDearls = 1;
         public CommodityInfo Commodity { get; set; }
         public CommodityBaseInfo CreateBaseInfo()
         {
-            return Commodity.Base;
-        }
-        public DeptInfo CreateCompanyAndDept()
-        {
-            return new DeptInfo();
+            throw new NotImplementedException();
         }
 
-        public OriginInfo CreateOrigin()
+        public bool CommodityValidateRule()
         {
             throw new NotImplementedException();
         }
-        
-        public bool CommodityValidateRule()
-        {
-            if (string.IsNullOrEmpty(Commodity.Base.CommodityName))
-            {
-                return false;
-            }
-            return true;
-        }
-        
+
         public CommodityProductInfo[] SetCommodityProducts()
         {
-            return new[] { new CommodityProductInfo(), new CommodityProductInfo() };
+            throw new NotImplementedException();
         }
 
         public CommodityPackageInfo[] SetCommodityPackages()
         {
             throw new NotImplementedException();
-        }        
+        }
 
         public string[] CreateCommodityAttributes()
         {
             throw new NotImplementedException();
         }
 
-        public int IsDearls { get; set; }
+        public int IsDearls
+        {
+            get { return _isDearls; }
+            set { _isDearls = value; }
+        }
     }
 }

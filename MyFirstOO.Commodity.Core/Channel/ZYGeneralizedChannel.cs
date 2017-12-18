@@ -7,7 +7,7 @@ namespace MyFirstOO.Commodity.Core.Channel
     /// <summary>
     /// 供应链广义渠道类
     /// </summary>
-    public class GongyinglianGeneralizedChannel : AbstractGeneralizedChannel
+    public class ZYGeneralizedChannel : AbstractGeneralizedChannel
     {
         /// <summary>
         /// 实现创建商品
@@ -17,17 +17,17 @@ namespace MyFirstOO.Commodity.Core.Channel
         protected override AbstractCommodity CreateCommodity(CommodityType commodityType)
         {
             AbstractCommodity commodity = null;
-            ICommodityIngredientFactory ingredientFactory = new GongyinglianCommodityIngredientFactory()
+            ICommodityIngredientFactory ingredientFactory = new GongyinglianZYCommodityIngredientFactory()
             {
                 Commodity= CommodityInfo
             };
-            if ((commodityType & CommodityType.Ziying) == CommodityType.Ziying)
+            if ((commodityType & CommodityType.Gongyinglian) == CommodityType.Gongyinglian)
             {
-                commodity = new ZyCommodity(ingredientFactory);
+                commodity = new GongyinglianCommodity(ingredientFactory);
             }
-            else if ((commodityType & CommodityType.Lianying) == CommodityType.Lianying)
+            else if ((commodityType & CommodityType.Chaoshi) == CommodityType.Chaoshi)
             {
-                commodity = new LyCommodity(ingredientFactory);
+                commodity = new ChaoshiCommodity(ingredientFactory);
             }
             return commodity;
         }

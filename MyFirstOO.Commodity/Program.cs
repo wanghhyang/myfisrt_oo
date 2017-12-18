@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MyFirstOO.Commodity.Core.Channel;
-using MyFirstOO.Commodity.Core.Ingreadient;
+﻿using MyFirstOO.Commodity.Core.Channel;
 using MyFirstOO.Commodity.Model;
 
-namespace MyFirstOO.Commodity
+namespace MyFirstOO.Commodity.Console
 {
     class Program
     {
         static void Main(string[] args)
         {
-            AbstractGeneralizedChannel abstractGeneralizedChannel = new GongyinglianGeneralizedChannel
+            AbstractGeneralizedChannel abstractGeneralizedChannel = new ZYGeneralizedChannel
             {
                 CommodityInfo = new CommodityInfo
                 {
@@ -21,7 +15,7 @@ namespace MyFirstOO.Commodity
                 }
             };
 
-            abstractGeneralizedChannel.IssuedCommodity(CommodityType.Ziying);
+            abstractGeneralizedChannel.IssuedCommodity(CommodityType.Gongyinglian);
         }
     }
 }

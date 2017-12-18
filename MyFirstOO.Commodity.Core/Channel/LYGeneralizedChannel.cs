@@ -9,20 +9,16 @@ using MyFirstOO.Commodity.Model;
 
 namespace MyFirstOO.Commodity.Core.Channel
 {
-    public class ChaoshiGeneralizedChannel : AbstractGeneralizedChannel
+    public class LYGeneralizedChannel : AbstractGeneralizedChannel
     {
         protected override AbstractCommodity CreateCommodity(CommodityType commodityType)
         {
             AbstractCommodity commodity = null;
             ICommodityIngredientFactory commodityIngredient = new ChaoshiCommodityIngredientFactory();
 
-            if ((commodityType & CommodityType.Ziying) == CommodityType.Ziying)
+            if ((commodityType & CommodityType.Gongyinglian) == CommodityType.Gongyinglian)
             {
-                commodity = new ZyCommodity(commodityIngredient);
-            }
-            else if ((commodityType & CommodityType.Lianying) == CommodityType.Lianying)
-            {
-                commodity = new LyCommodity(commodityIngredient);
+                commodity = new GongyinglianCommodity(commodityIngredient);
             }
             return commodity;
         }

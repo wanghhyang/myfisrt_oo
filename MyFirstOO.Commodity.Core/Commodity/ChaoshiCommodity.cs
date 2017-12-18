@@ -3,10 +3,10 @@ using MyFirstOO.Commodity.Core.Ingreadient;
 
 namespace MyFirstOO.Commodity.Core.Commodity
 {
-    public class LyCommodity : AbstractCommodity
+    public class ChaoshiCommodity : AbstractCommodity
     {
         readonly ICommodityIngredientFactory _commodityIngredientFactory;
-        public LyCommodity(ICommodityIngredientFactory commodityIngredientFactory)
+        public ChaoshiCommodity(ICommodityIngredientFactory commodityIngredientFactory)
         {
             _commodityIngredientFactory = commodityIngredientFactory;
         }
