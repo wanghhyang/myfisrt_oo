@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Channel\AbstractGeneralizedChannelTests.cs" />
+    <Compile Include="Ingreadient\GongyinglianCommodityIngredientFactoryTests.cs" />
     <Compile Include="ZYCommodityTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

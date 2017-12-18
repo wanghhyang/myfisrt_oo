@@ -13,11 +13,16 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
         {
             return Commodity.Base;
         }
-        public int CreateCompanyId()
+        public DeptInfo CreateCompanyAndDept()
         {
-            return Commodity.CompanyId;
+            return new DeptInfo();
         }
 
+        public OriginInfo CreateOrigin()
+        {
+            throw new NotImplementedException();
+        }
+        
         public bool CommodityValidateRule()
         {
             if (string.IsNullOrEmpty(Commodity.Base.CommodityName))
@@ -26,13 +31,7 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
             }
             return true;
         }
-
-        public CommodityAddtionalInfo SetAddtionalCommodityInfo()
-        {
-            Commodity.AddtionalInfo = new CommodityAddtionalInfo { AdditonalInfo = "不可打包" };
-            return Commodity.AddtionalInfo;
-        }
-
+        
         public CommodityProductInfo[] SetCommodityProducts()
         {
             return new[] { new CommodityProductInfo(), new CommodityProductInfo() };
@@ -41,18 +40,12 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
         public CommodityPackageInfo[] SetCommodityPackages()
         {
             throw new NotImplementedException();
-        }
-
-        public string CreateCommodityPictures()
-        {
-            throw new NotImplementedException();
-        }
+        }        
 
         public string[] CreateCommodityAttributes()
         {
             throw new NotImplementedException();
         }
-
 
         public int IsDearls { get; set; }
     }

@@ -18,17 +18,17 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
         /// 创建公司主体
         /// </summary>
         /// <returns></returns>
-        int CreateCompanyId();
+        DeptInfo CreateCompanyAndDept();
+        /// <summary>
+        /// 创建产地
+        /// </summary>
+        /// <returns></returns>
+        OriginInfo CreateOrigin();
         /// <summary>
         /// 创建自己的商品信息验证规则
         /// </summary>
         /// <returns></returns>
         bool CommodityValidateRule();
-        /// <summary>
-        /// 创建额外的商品信息
-        /// </summary>
-        /// <returns></returns>
-        CommodityAddtionalInfo SetAddtionalCommodityInfo();
         /// <summary>
         /// 创建商品组成原料
         /// </summary>
@@ -39,11 +39,6 @@ namespace MyFirstOO.Commodity.Core.Ingreadient
         /// </summary>
         /// <returns></returns>
         CommodityPackageInfo[] SetCommodityPackages();
-        /// <summary>
-        /// 创建商品图片
-        /// </summary>
-        /// <returns></returns>
-        string CreateCommodityPictures();
         /// <summary>
         /// 创建商品属性
         /// </summary>
