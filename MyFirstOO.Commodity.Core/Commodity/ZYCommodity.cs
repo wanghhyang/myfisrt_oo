@@ -14,7 +14,6 @@ namespace MyFirstOO.Commodity.Core.Commodity
         public override void PreResolveCommodity()
         {
             BaseCommodityInfo = _commodityIngredientFactory.CreateBaseInfo();
-            AddionalCommodityInfo = _commodityIngredientFactory.SetAddtionalCommodityInfo();
             Attributes = _commodityIngredientFactory.CreateCommodityAttributes();
             Products = _commodityIngredientFactory.SetCommodityProducts();
             Packages = _commodityIngredientFactory.SetCommodityPackages();
